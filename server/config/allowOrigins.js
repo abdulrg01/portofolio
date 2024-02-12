@@ -1,5 +1,5 @@
 const allowOrigins = [
-    'https://server-tu81.onrender.com'
+    'http://localhost:3000'
 ]
 
 module.exports = allowOrigins 

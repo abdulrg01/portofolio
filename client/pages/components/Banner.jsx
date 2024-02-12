@@ -23,7 +23,7 @@ export default function Banner() {
   return (
     <section
       id="home"
-      className="max-w-[950px] mx-auto py-5 md:pb-5 md:pt-32 flex flex-col gap-4 lg:gap-6 md:px-10 xl:px-4"
+      className="max-w-[950px] mx-auto py-36 md:pb-10 flex flex-col gap-4 lg:gap-6 md:px-10 xl:px-4"
     >
       <motion.h3
         className="text-lg tracking-wide text-black dark:text-white"

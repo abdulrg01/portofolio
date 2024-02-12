@@ -52,7 +52,7 @@ export default function Navbar() {
   return (
     <div className="w-full flex items-center justify-center h-20 lg:h-[12vh] fixed top-0 left-0 right-0 z-50 bg-gray-200 dark:bg-[#020A13] border-gray-800 border-b-[1px]">
       <div className="w-screen mx-auto">
-        <div className="max-w-[1180px] h-full mx-auto py-3 flex items-center justify-between">
+        <div className="max-w-[1180px] h-full mx-auto py-3 md:px-0 px-3 flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

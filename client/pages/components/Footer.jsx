@@ -7,9 +7,9 @@ export default function Footer() {
         <span>
           <Link href="/" className="flex mr-4">
             <img
-              src="https://flowbite.s3.amazonaws.com/logo.svg"
+              src="/logo.png"
               className="mr-3 h-8"
-              alt="FlowBite Logo"
+              alt="Logo"
             />
           </Link>
         </span>

@@ -20,13 +20,13 @@ export default function Experience() {
 
   useEffect(() => {
     if (historyData) {
-      setHistory(data.history);
+      setHistory(historyData);
     }
   }, [historyData]);
 
   useEffect(() => {
     if (data) {
-      setSkills(data.skills);
+      setSkills(data);
     }
   }, [data]);
 
@@ -46,7 +46,7 @@ export default function Experience() {
                     <div className="skillImg rounded-full flex items-center justify-center w-[120px] h-[120px]">
                       <img
                         className="w-[75px]"
-                        src={skill.img.url}
+                        src={skill.img?.url}
                         alt={skill.title}
                       />
                     </div>
@@ -67,7 +67,7 @@ export default function Experience() {
                   >
                     <img
                       className="w-[50px]"
-                      src={item.imageSrc.url}
+                      src={item.imageSrc?.url}
                       alt={item.organisation}
                     />
                     <div className="historyItemDetails">

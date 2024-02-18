@@ -21,7 +21,7 @@ export default function ProjectSection() {
 
   useEffect(() => {
     if (data) {
-      setProjects(data.projects);
+      setProjects(data);
     }
   }, [data]);
 

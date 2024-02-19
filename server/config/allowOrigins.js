@@ -1,3 +1,5 @@
-const allowOrigins = ["https://portofolio-jet-sigma.vercel.app"];
+const allowOrigins = [
+    "https://portofolio-jet-sigma.vercel.app",
+];
 
 module.exports = allowOrigins;

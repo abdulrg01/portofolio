@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
-import { useGetProjectsDataQuery } from "@/redux/projects/projectApiSlice";
 
 const projectsUI = [
   {
@@ -33,25 +32,11 @@ const projectsUI = [
 
 export default function ProjectSection() {
   const ref = useRef(null);
-  const [projects, setProjects] = useState([]);
   const isInView = useInView(ref, { once: true });
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
   };
-
-  const { data } = useGetProjectsDataQuery(
-    {},
-    {
-      refetchOnMountOrArgChange: true,
-    }
-  );
-
-  useEffect(() => {
-    if (data) {
-      setProjects(data);
-    }
-  }, [data]);
 
   return (
     <div className="bg-gray-200 dark:bg-[#020A13]" id="project">
@@ -67,43 +52,24 @@ export default function ProjectSection() {
           ref={ref}
           class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 grid-cols-2"
         >
-          {projects
-            ? projects.map((item, index) => (
-                <motion.li
-                  key={index}
-                  variants={cardVariants}
-                  initial="initial"
-                  animate={isInView ? "animate" : "initial"}
-                  transition={{ duration: 0.3, delay: index + 0.4 }}
-                >
-                  <ProjectCard
-                    key={index}
-                    title={item.title}
-                    desc={item.desc}
-                    img={item.imageSrc.url}
-                    gitUrl={item?.gitUrl}
-                    previewUrl={item?.previewUrl}
-                  />
-                </motion.li>
-              ))
-            : projectsUI.map((item, index) => (
-                <motion.li
-                  key={index}
-                  variants={cardVariants}
-                  initial="initial"
-                  animate={isInView ? "animate" : "initial"}
-                  transition={{ duration: 0.3, delay: index + 0.4 }}
-                >
-                  <ProjectCard
-                    key={index}
-                    title={item.title}
-                    desc={item.desc}
-                    img={item.imageSrc}
-                    gitUrl={item.gitUrl}
-                    previewUrl={item.previewUrl}
-                  />
-                </motion.li>
-              ))}
+          {projectsUI.map((item, index) => (
+            <motion.li
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index + 0.4 }}
+            >
+              <ProjectCard
+                key={index}
+                title={item.title}
+                desc={item.description}
+                img={item.imageSrc}
+                gitUrl={item.gitUrl}
+                previewUrl={item.previewUrl}
+              />
+            </motion.li>
+          ))}
         </ul>
       </div>
     </div>

@@ -4,6 +4,15 @@ import { motion, useInView } from "framer-motion";
 
 const projectsUI = [
   {
+    title: "Social Media Platform",
+    imageSrc: "/social.png",
+    description:
+      "From breaking news and entertainment to sports, politics, and everyday interests, when it happens in the world.",
+    skills: ["Next js", "Express", "Node"],
+    previewUrl: "social-media-opal-sigma.vercel.app",
+    gitUrl: "https://github.com/abdulrg01/social-media",
+  },
+  {
     title: "AI Prompt",
     imageSrc: "/ai.png",
     description:
@@ -13,20 +22,20 @@ const projectsUI = [
     gitUrl: "https://github.com/abdulrg01/AI_Prompt",
   },
   {
+    title: "RG Elearning",
+    imageSrc: "/eclass.png",
+    description:
+      "ABC is an online learning platform that helps students, companies, and governments gain the skills they need to reach their goals",
+    previewUrl: "https://eclass-two.vercel.app/",
+    gitUrl: "https://github.com/abdulrg01/eclass.git",
+  },
+  {
     title: "Gpower",
     imageSrc: "/gpower.png",
     description:
       "Gpower An all-in-one app for bill payments, airtime, data, betting, electricity, TV and other services.",
     previewUrl: "https://dashboard-nu-liart-54.vercel.app/",
     gitUrl: "https://github.com/abdulrg01/dashboard.git",
-  },
-  {
-    title: "ABC Elearning",
-    imageSrc: "/eclass.png",
-    description:
-      "ABC is an online learning platform that helps students, companies, and governments gain the skills they need to reach their goals",
-    previewUrl: "https://eclass-two.vercel.app/",
-    gitUrl: "https://github.com/abdulrg01/eclass.git",
   },
 ];
 

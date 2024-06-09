@@ -9,7 +9,7 @@ const projectsUI = [
     description:
       "From breaking news and entertainment to sports, politics, and everyday interests, when it happens in the world.",
     skills: ["Next js", "Express", "Node"],
-    previewUrl: "social-media-opal-sigma.vercel.app",
+    previewUrl: "https://social-media-opal-sigma.vercel.app/",
     gitUrl: "https://github.com/abdulrg01/social-media",
   },
   {

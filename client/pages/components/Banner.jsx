@@ -69,14 +69,14 @@ export default function Banner() {
           ? desc
           : "Welcome to my portfolio! I am Abdulrahman Abubakar, a passionate web developer with a keen eye for design and a drive for innovation. Through my diverse range of projects, I aim to showcase my creativity, technical proficiency, and dedication to delivering exceptional results."}
       </motion.p>
-      <a href="https://github.com/abdulrg01">
+      <a href="https://firebasestorage.googleapis.com/v0/b/contactme-2970e.appspot.com/o/myresume.pdf?alt=media&token=c71c2a34-bf60-4338-85b2-9a08ac4df8a8" target="_blank">
         <motion.button
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.1, delay: 0.1 }}
           class="text-black dark:text-white hover:underline font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2 inline-flex"
         >
-          Learn More
+          Resume
           <svg
             className="w-5 h-5 ml-2 -mr-1"
             fill="currentColor"
